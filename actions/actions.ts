@@ -2,15 +2,15 @@
 
 import {Property} from '@/types/properties'
 
-export async function getProperties(): Promise<Property[] | unknown> {
+export async function getProperties(): Promise<Property[]> {
   try {
     const response = await fetch(`${process.env.JSON_SERVER_URL}`)
     if (!response.ok) {
       throw new Error(`Error Status: ${response.status}`)
     }
-    const properties = await response.json()
+    const properties: Property[] = await response.json()
     return properties
   } catch (error) {
-    return error
+    throw new Error(`Fetch error: ${error}`)
   }
 }
