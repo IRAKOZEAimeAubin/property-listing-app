@@ -11,6 +11,6 @@ export async function getProperties(): Promise<Property[]> {
     const properties: Property[] = await response.json()
     return properties
   } catch (error) {
-    throw new Error(`Fetch error: ${error}`)
+    throw error
   }
 }

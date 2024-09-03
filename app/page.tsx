@@ -4,7 +4,7 @@ import PropertiesList from './_components/propertiesList';
 
 export default async function Home () {
   return (
-    <section>
+    <section className='mt-4'>
       <PropertiesList />
     </section>
   )
