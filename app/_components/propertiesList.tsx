@@ -26,7 +26,7 @@ export default function PropertiesList() {
   }
 
   return (
-    <div className='grid grid-cols-4'>
+    <div className='grid grid-cols-4 gap-2'>
       {data ? (
         data.map( ( property ) => (
             <PropertyCard key={property.zpid} property={property} />
